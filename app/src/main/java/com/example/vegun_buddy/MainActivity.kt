@@ -22,13 +22,23 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(p0: Editable?) {
-                if(android.util.Patterns.EMAIL_ADDRESS.matcher(editText.text.toString()).matches())
+                var pc = editText.text
+                if (this.useRegex(pc)) {
                     btn_srch.isEnabled = true
-                else
+                 } else {
                     btn_srch.isEnabled = false
+                 }
+//                if(android.util.Patterns.EMAIL_ADDRESS.matcher(editText.text.toString()).matches())
+//                    btn_srch.isEnabled = true
+//                else
+//                    btn_srch.isEnabled = false
 
             }
 
+            fun useRegex(input: Editable): Boolean {
+                val regex = Regex(pattern = "^([A-Za-z]d[A-Za-z][ ]d[A-Za-z]d)$", options = setOf(RegexOption.IGNORE_CASE))
+                return regex.matches(editText.text)
+            }
         })
     }
 }
