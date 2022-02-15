@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Vegun-Buddy</string>
+    <string name="vegun_buddy">Vegun Buddy</string>
+    <string name="looking_for_a_restaurant_near_by">Looking for a restaurant near by?</string>
+    <string name="please_enter">Please Enter</string>
+    <string name="postal_code_here">Postal code here</string>
+</resources>
