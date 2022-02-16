@@ -1,7 +1,13 @@
 <resources>
-    <string name="app_name">Vegun-Buddy</string>
-    <string name="vegun_buddy">Vegun Buddy</string>
+    <string name="app_name">Vegan-Buddy</string>
+    <string name="vegun_buddy">Vegan Buddy</string>
     <string name="looking_for_a_restaurant_near_by">Looking for a restaurant near by?</string>
     <string name="please_enter">Please Enter</string>
     <string name="postal_code_here">Postal code here</string>
+    <string name="navigation_drawer_open">open navigation</string>
+    <string name="navigation_drawer_close">close navigation</string>
+    <string name="vegan_buddy">Vegan Buddy</string>
+    <string name="looking_for_a_restaurant_nearby">Looking for a restaurant nearby?</string>
+    <string name="search">Search</string>
+    <string name="please_enter_your_postal_code">Please enter your postal code</string>
 </resources>
