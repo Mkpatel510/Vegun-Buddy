@@ -6,6 +6,8 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,11 +24,12 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(p0: Editable?) {
-                var pc = editText.text
-                if (this.useRegex(pc)) {
+                //var pc = editText.text
+                if (useRegex(editText.text.toString())) {
                     btn_srch.isEnabled = true
                  } else {
                     btn_srch.isEnabled = false
+
                  }
 //                if(android.util.Patterns.EMAIL_ADDRESS.matcher(editText.text.toString()).matches())
 //                    btn_srch.isEnabled = true
@@ -35,9 +38,10 @@ class MainActivity : AppCompatActivity() {
 
             }
 
-            fun useRegex(input: Editable): Boolean {
-                val regex = Regex(pattern = "^([A-Za-z]d[A-Za-z][ ]d[A-Za-z]d)$", options = setOf(RegexOption.IGNORE_CASE))
-                return regex.matches(editText.text)
+            private fun useRegex(input: String): Boolean {
+                var p: Pattern = Pattern.compile("[A-Za-z][0-9][A-Za-z][ -][0-9][A-Za-z][0-9]")
+                var m: Matcher = p.matcher(input)
+                return m.matches()
             }
         })
     }
