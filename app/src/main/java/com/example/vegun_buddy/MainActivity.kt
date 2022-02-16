@@ -16,6 +16,11 @@ class MainActivity : AppCompatActivity() {
 
         val editText = findViewById<EditText>(R.id.postalcode)
         var btn_srch = findViewById<Button>(R.id.srch)
+        fun useRegex(input: String): Boolean {
+            var p: Pattern = Pattern.compile("[A-Za-z][0-9][A-Za-z][ -][0-9][A-Za-z][0-9]")
+            var m: Matcher = p.matcher(input)
+            return m.matches()
+        }
         editText.addTextChangedListener(object:TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
@@ -31,17 +36,7 @@ class MainActivity : AppCompatActivity() {
                     btn_srch.isEnabled = false
 
                  }
-//                if(android.util.Patterns.EMAIL_ADDRESS.matcher(editText.text.toString()).matches())
-//                    btn_srch.isEnabled = true
-//                else
-//                    btn_srch.isEnabled = false
 
-            }
-
-            private fun useRegex(input: String): Boolean {
-                var p: Pattern = Pattern.compile("[A-Za-z][0-9][A-Za-z][ -][0-9][A-Za-z][0-9]")
-                var m: Matcher = p.matcher(input)
-                return m.matches()
             }
         })
     }
