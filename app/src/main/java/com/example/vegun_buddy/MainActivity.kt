@@ -1,5 +1,6 @@
 package com.example.vegun_buddy
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -25,6 +26,8 @@ class MainActivity : AppCompatActivity() {
 
 
        val toolbar : MaterialToolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        toolbar.setTitleTextColor(Color.WHITE)
+        toolbar.setTitle("Vegan Buddy")
         setSupportActionBar(toolbar)
         val frameLayout: FrameLayout = findViewById(R.id.main_frameLayout)
         val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
@@ -34,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         val editText = findViewById<EditText>(R.id.postalcode)
         var btn_srch = findViewById<Button>(R.id.srch)
         fun useRegex(input: String): Boolean {
-            var p: Pattern = Pattern.compile("[A-Za-z][0-9][A-Za-z][ -][0-9][A-Za-z][0-9]")
+            var p: Pattern = Pattern.compile("[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]")
             var m: Matcher = p.matcher(input)
             return m.matches()
         }
