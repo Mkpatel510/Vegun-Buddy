@@ -62,18 +62,21 @@
                 android:textSize="24sp" />
 
             <EditText
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:id="@+id/postalcode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="10dp"
+                android:hint="Postalcode"
+                app:startIconDrawable="@drawable/add"
                 android:autoText="false"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="textPostalAddress"
                 android:textSize="20sp"
-                android:maxLength="7"
+                android:maxLength="6"
                 />
 
         </LinearLayout>

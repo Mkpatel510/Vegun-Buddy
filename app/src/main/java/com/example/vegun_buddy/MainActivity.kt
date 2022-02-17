@@ -9,6 +9,7 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.appbar.MaterialToolbar
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         val editText = findViewById<EditText>(R.id.postalcode)
         var btn_srch = findViewById<Button>(R.id.srch)
         fun useRegex(input: String): Boolean {
-            var p: Pattern = Pattern.compile("[A-Za-z][0-9][A-Za-z][ -][0-9][A-Za-z][0-9]")
+            var p: Pattern = Pattern.compile("[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]")
             var m: Matcher = p.matcher(input)
             return m.matches()
         }
@@ -56,5 +57,9 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
+        btn_srch.setOnClickListener {
+            val value = editText.text
+            Toast.makeText(this,value,Toast.LENGTH_LONG).show()
+        }
     }
 }
