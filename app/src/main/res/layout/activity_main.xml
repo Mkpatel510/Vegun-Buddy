@@ -21,7 +21,9 @@
         android:id="@+id/navigation"
         app:headerLayout="@layout/headerfile"
         app:menu="@menu/sidemenu"
-        android:layout_gravity="start"/>
+        android:layout_gravity="left"
+
+        />
 
     <ScrollView
         android:layout_width="match_parent"
