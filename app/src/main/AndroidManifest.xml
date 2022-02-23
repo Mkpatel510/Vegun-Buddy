@@ -10,20 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VegunBuddy">
         <activity
+            android:name=".ProfilePage"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.VegunBuddy">
-
-        </activity>
+            android:theme="@style/Theme.VegunBuddy"></activity>
     </application>
 
 </manifest>

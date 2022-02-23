@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     android:id="@+id/drawerLayout"
     android:fitsSystemWindows="true"
-    tools:openDrawer="left">
+    tools:openDrawer="start">
 
     <include
         android:layout_width="match_parent"
@@ -21,78 +21,6 @@
         android:id="@+id/navigation"
         app:headerLayout="@layout/headerfile"
         app:menu="@menu/sidemenu"
-        android:layout_gravity="left"
-
-        />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="SpeakableTextPresentCheck">
-
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar" />
-    </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/label1"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="@string/looking_for_a_restaurant_nearby"
-            android:textSize="24sp"
-            android:layout_marginTop="100dp"
-            android:layout_marginStart="20dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="103dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/label2"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/please_enter_your_postal_code"
-                android:textSize="24sp" />
-
-            <EditText
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:id="@+id/postalcode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="10dp"
-                android:hint="Postalcode"
-                app:startIconDrawable="@drawable/add"
-                android:autoText="false"
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="textPostalAddress"
-                android:textSize="20sp"
-                android:maxLength="6"
-                />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/srch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:enabled="false"
-            android:text="Search" />
-
-
-    </LinearLayout>
+        android:layout_gravity="start" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
