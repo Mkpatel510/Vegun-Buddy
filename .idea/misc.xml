@@ -7,7 +7,7 @@
         <entry key="app/src/main/res/drawable/gradient.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/headercolor.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_profile_page.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_profile_page.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.1897644927536232" />
         <entry key="app/src/main/res/layout/appbar_home_drawer.xml" value="0.1897644927536232" />
         <entry key="app/src/main/res/layout/content_home.xml" value="0.1897644927536232" />
